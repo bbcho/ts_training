@@ -1,19 +1,27 @@
-console.log("Your code goes here!");
-function add(n1, n2, showResult, phrase) {
-    //   if (typeof n1 !== "number" || typeof n2 !== "number") {
-    //     throw new Error("Incorrect input");
-    //   }
-    var result = n1 + n2;
-    if (showResult) {
-        console.log(phrase + result);
+var Role;
+(function (Role) {
+    Role[Role["ben"] = 0] = "ben";
+    Role[Role["billie"] = 1] = "billie";
+})(Role || (Role = {}));
+console.log(Role.ben === 0);
+var person = {
+    name: "ben",
+    age: 41,
+    hobbies: ["Sports", "Cooking"],
+    role: [2, "author"],
+    adder: function () {
+        return this.age * 2;
     }
-    else {
-        return n1 + n2;
-    }
+};
+person.role.push("admin");
+console.log(person.adder());
+var a = [1, 2, 3];
+var b = [4, 5, 6];
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toUpperCase());
 }
-var number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = "Result is: ";
-var result = add(number1, number2, printResult, resultPhrase);
-// console.log(result);
+function test(a, b) {
+    if (b === void 0) { b = 0; }
+    return a + b;
+}
